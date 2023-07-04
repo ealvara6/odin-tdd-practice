@@ -14,8 +14,8 @@ const cipherLetter = (letter, shift) => {
 };
 
 const checkErrors = (string, shift) => {
-  if (typeof string !== 'string') throw new Error('first input must be a string');
-  if (typeof shift !== 'number') throw new Error('second input must be a number');
+  if (typeof string !== 'string') throw new Error(handleError('first input must be a string'));
+  if (typeof shift !== 'number') throw new Error(handleError('second input must be a number'));
 };
 
 const caesarCipher = (string, shift) => {

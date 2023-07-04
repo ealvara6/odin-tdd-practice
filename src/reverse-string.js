@@ -1,5 +1,7 @@
+import handleError from './error';
+
 const reverseString = (string) => {
-  if (typeof string !== 'string') throw new Error('Input must be of type String');
+  if (typeof string !== 'string') throw new Error(handleError('Input must be of type String'));
 
   const tempString = string.trim().split('');
   let stringReversed = '';
